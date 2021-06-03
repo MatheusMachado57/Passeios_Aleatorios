@@ -1,10 +1,12 @@
 
-# Q1 - r mudanças de sinal em 2n+1 unidades de tempo;
+# Q1 - a probabilidade de haver r mudanças de sinal em 2n+1 unidades de tempo;
 q1 = function(n,r){
      resp = choose(2*n+1 , n+r+1)/(2^(2*n))
+     # sendo choose uma funcao matematica relaconada
+     # as funcoes beta e gamma; 
      cat(resp)
 }
-q1(2,2)
+q1(1,1)
 
 # Q2 - prob do ponto máx de um PA de tamanho n ser r
 q2 = function(n,r){
@@ -16,7 +18,7 @@ q2 = function(n,r){
      }
      cat(resp)
 }
-q2(9,6)
+q2(2,0)
 
 # Q3 - 10000 replicacoes de um PA de 199 passos;
 #      guardar: A) n de troca de sinais
@@ -96,7 +98,7 @@ q3a = function(n,r){
       # contando o numero de lados acima do eixo x de cada passeio
     }                                
     f[i] = a                    
-    # armazenando o n?mero de troca de sinal de cada passeio         
+    # armazenando o numero de troca de sinal de cada passeio         
     b[i] = max(v)               
     # armazenando o maior valor de cada passeio 
     c[i] = d                    
@@ -296,9 +298,7 @@ q6 = function(r,n){
      s = c(NULL)     
      # vetor que contera o maior valor de cada instervalo;
      c = c(NULL)
-     for (i in 1:r){
-          s[i] = i/r
-     }
+     for (i in 1:r){s[i] = i/r}
      for(j in 1:n){
      f = rep(0,r)     
      # vetor que contera os intervalos ao qual cada runif pertence;    
@@ -311,7 +311,7 @@ q6 = function(r,n){
      # obs: os intervalos sao como os amigos e runif sao como as visitas;
       hist(c)
       cat("\nVetor com o maior valor de cada intervalo:",s)
-#     cat("\nVetor com os vizinhos que foram visitados:",f)
+      cat("\nVetor com os vizinhos que foram visitados:",f)
 }
 
 q6(3,1000)
