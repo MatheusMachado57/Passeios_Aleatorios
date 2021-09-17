@@ -184,7 +184,9 @@ q6 = function(n,r){
 }  
 q6(1000,100)  
 
-# Q7
+# Q7 - Faça uma função que receba um número inteiro n > 0 e retorne a probabilidade de
+# que no instante n ocorra o primeiro retorno a origem (fn). Use as funções criadas anteriormente.
+
 q7 = function(n){
      if(n%%2 != 0){stop("N deve ser um n?mero par")}       
      # Verificando se n e par
@@ -202,7 +204,8 @@ q7 = function(n){
 q7(0)
 q7(4)
 
-# Q8
+# Q8 - Implemente o teorema da lei do arco seno para últimas visitas.
+
 q8 = function(n,k){
   if(n%%2 != 0){stop("N deve ser um n?mero par")}    
   # Verificando se n e k sao numeros pares.
@@ -217,7 +220,11 @@ q8 = function(n,k){
 
 q8(20,10)
 
-# Q9
+# Q9 - Construa 1000 replicações de um passeio aleatório de 100 passos, e guarda o instante
+# da última visita ao estado zero. Construa um histograma dos instantes de última
+# visita ao zero. Faça uma tabela, comparando os resultados obtidos empiricamente
+# com os resultados teóricos do exercício 8.
+
 q9 = function(n,r){
   a = c(NULL)
   k = 1
