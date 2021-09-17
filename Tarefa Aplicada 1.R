@@ -1,5 +1,11 @@
 
-# Q1
+# Q1 Para gerar no R uma lançamento de moeda, um método elementar é gerar aleatóriamente um número entre 0 e 1, 
+# com o comando runif(1). Se o número gerado
+# for menor que 0.5, consideramos cara, senão, o resultado foi coroa.
+# Construa uma função que simule um passeio aleatório de tamanho n, onde n é
+# um argumento da função. A função deve retornar o gráfico do passeio aleatório
+# simulado e o valor de Sn.
+
 runif(1)
 
 q1 = function(n){                                              
@@ -22,7 +28,10 @@ q1 = function(n){
 }
 q1(100)
 
-# Q2
+# Q2 Construa uma função que simule r passeios aleatórios de tamanho n, onde n e r
+# devem ser argumentos da função. A função deve retornar a média dos Sn e um
+# histograma do estado onde terminou o processo.
+
 q2 = function(n,r){                             
      Sn = 0                           
      # objeto de contagem
@@ -50,7 +59,10 @@ q2 = function(n,r){
 q2(100,10)  
 
 # Q3
-# A
+# A - Faça uma função que receba dois números inteiros, n > 0 e r e retorne o
+# número total de caminhos que vão da origem até o ponto (n, r), ou seja, Nn,r.
+# Não se esqueça de verificar se n e r têm a mesma paridade, caso contrário a
+# função deve retornar uma mensagem de erro.
 q3a = function(n,r){
       if((r+n)%%2 != 0){stop("N e R devem ter a mesma paridade")}           
       if(r>n){stop("R deve ser igual ou menor que N ")}
@@ -63,7 +75,9 @@ q3a = function(n,r){
 q3a(10,10)
 q3a(4,0)
   
-# B
+# B - Usando a função anterior, faça uma função que retorne a probabilidade de
+# num instante n > 0 o caminho estar na altura r, ou seja, pn,r.
+
 q3b = function(n,r){
       if((r+n)%%2 != 0){stop("N e R devem ter a mesma paridade")}
       if(r>n){stop("R deve ser igual ou menor que N ")}
@@ -76,7 +90,10 @@ q3b = function(n,r){
 }
 q3b(100,10)
 
-# Q4
+# Q4 - Utilizando o exercício 2, construa 1000 replicações de um passeio aleatório de 100
+# passos. Calcule a proporção de passeios tais que S100 = 10. Compare com o
+# resultado obtido no exercício 3.
+
 q4 = function(n,r){ 
   Sn = 0                                       
   # objeto que ajudara na contagem 
