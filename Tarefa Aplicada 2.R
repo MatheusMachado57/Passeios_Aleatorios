@@ -1,5 +1,7 @@
 
-# Q1 - a probabilidade de haver r mudanças de sinal em 2n+1 unidades de tempo;
+# Q1 - Implemente uma função que calcula a probabilidade de haver r mudanças de sinal
+# em 2n + 1 unidades de tempo.
+
 q1 = function(n,r){
      resp = choose(2*n+1 , n+r+1)/(2^(2*n))
      # sendo choose uma funcao matematica relaconada
@@ -8,7 +10,9 @@ q1 = function(n,r){
 }
 q1(1,1)
 
-# Q2 - prob do ponto máx de um PA de tamanho n ser r
+# Q2 - Implemente uma função que calcula a probabilidade do máximo de uma passeio
+# aleatório de n passos ser r.
+
 q2 = function(n,r){
      if(n < r){stop("n deve ser maior ou igual a r")}
      if((n+r)%%2 == 0){
@@ -20,10 +24,9 @@ q2 = function(n,r){
 }
 q2(2,0)
 
-# Q3 - 10000 replicacoes de um PA de 199 passos;
-#      guardar: A) n de troca de sinais
-#               B) o max atingido por cada passeio
-#               C) n de lados acima do eixo
+# Q3 - Construa 10.000 replicações de um passeio aleatório de 199 passos, e guarde, para
+# cada replicação, o número de trocas de sinal, o máximo atingido por cada passeio
+# e o nímero de lados que o passeio ficou acima do eixo.
 
 q3 = function(n,r){
      f  = c(NULL)
@@ -68,7 +71,8 @@ q3 = function(n,r){
 
 q3(199,3)
 
-# A
+# A - Construa um histograma com o número de trocas de sinal das 10.000 replicações.
+
 q3a = function(n,r){
   f  = c(NULL)
   c  = c(NULL)
