@@ -122,7 +122,9 @@ q4 = function(n,r){
 q4(1000,100)  
 
 # Q5
-# A
+# A - Faça uma função que receba um número inteiro positivo n e retorne a probabilidade de ocorrer uma volta a origem no instante n (un). Lembre-se de
+# verificar se n é um número par, caso contrário a função deve retornar uma mensagem de erro.
+
 q5a = function(n){
       if(n%%2 != 0){stop("N deve ser um n?mero par")}             
       # verificando se n e par
@@ -139,7 +141,9 @@ q5a = function(n){
 q5a(10)
 q5a(2)
 
-# B
+# B - Melhore a função anterior de forma que ela retorne também essa probabilidade
+# aproximada pela fórmula de Stirling, se o usuário preferir.
+
 q5b = function(n,alt){                                    
       if(n%%2 != 0){stop("N deve ser um número par")}       
       # verificando se n e impar
@@ -158,11 +162,14 @@ q5b = function(n,alt){
 }
 q5b(2,"Stirling")
   
-# C
+# C - Construa uma tabela que apresenta os erros absolutos e relativos quando utilizamos a aproximação de Stirling, 
+# para diversos valores de n (n=2,4,6, 8, 10, 50, 100, 500, 1000).
 a = data.frame(NULL)
 
 
-# Q6
+# Q6 - Utilizando o exercício 2, construa 1000 replicações de um passeio aleatório de 100
+# passos. Calcule a proporção de passeios tais que S100 = 0. Compare com o resultado
+# obtido no exercício 5).
 q6 = function(n,r){
   Sn = 0                            
   # mesmo codigo do exercicio 4, porem com Sn = 0; 
